@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "f8a79eed-8921-430b-a92b-079fb403431c",
+		"name": "Keycloak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8732994"
+	},
+	"item": [
+		{
+			"name": "SecurityApp-BasicAuth",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Z5XKS58uI85PEP6blovpRiVODW0v3euc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "training",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ufuk\",\n    \"contactPhone\": \"010203040506\",\n    \"contactName\": \"Kerem\",\n    \"contactEmail\": \"kerem@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/organization/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"organization",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrganizationByOrgId",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Z5XKS58uI85PEP6blovpRiVODW0v3euc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "training",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/v1/organization/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"organization",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrgByOrgId",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Z5XKS58uI85PEP6blovpRiVODW0v3euc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "training",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/v1/organization/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"organization",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SecurityApp-OAuth2",
+			"item": [
+				{
+					"name": "CreateaNewOrgwithAdminAuthorization",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "username",
+									"value": "ufuk",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8080/realms/moonstar-dev/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "abc1",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "Z5XKS58uI85PEP6blovpRiVODW0v3euc",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "training",
+									"type": "string"
+								},
+								{
+									"key": "refreshRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "tokenRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "challengeAlgorithm",
+									"value": "S256",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ufuk\",\n    \"contactPhone\": \"010203040506\",\n    \"contactName\": \"Kerem\",\n    \"contactEmail\": \"kerem@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/organization/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"organization",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/v1/organization/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"organization",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/v1/organization/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"organization",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/realms/moonstar-dev/.well-known/openid-configuration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/realms/moonstar-dev/.well-known/openid-configuration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"moonstar-dev",
+						".well-known",
+						"openid-configuration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/realms/moonstar-dev/protocol/openid-connect/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Z5XKS58uI85PEP6blovpRiVODW0v3euc",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "training",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "kerem",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abc1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/moonstar-dev/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"moonstar-dev",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
