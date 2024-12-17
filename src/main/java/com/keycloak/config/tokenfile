@@ -1,0 +1,43 @@
+jwt=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJIbDhSQWZqNUsyTHRQcmVfbGV4eWY1TTNUYTlLZE9WMkFBZzZmSDg1NUtZIn0.eyJleHAiOjE3MzQ0NjU3MDgsImlhdCI6MTczNDQ2NTQwOCwianRpIjoiODc5NWYxN2ItMzA3My00MTMzLWI2OTAtYzUwOTI1YjMwZmQ3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tb29uc3Rhci1kZXYiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODM3ZDIwNzMtNjA1YS00ZjQzLThiYzItNGE0OGQ4OTI5OGYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidHJhaW5pbmciLCJzZXNzaW9uX3N0YXRlIjoiNjc5MjViNzQtNmVjOS00ZWVjLWFiNzYtMDU2MGFjNzViOGQzIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiTW9vbnN0YXItVXNlciIsImRlZmF1bHQtcm9sZXMtbW9vbnN0YXItZGV2Iiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InRyYWluaW5nIjp7InJvbGVzIjpbIlVTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjY3OTI1Yjc0LTZlYzktNGVlYy1hYjc2LTA1NjBhYzc1YjhkMyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJrZXJlbSJ9.WIjkxHqLGKBipivjmLshErJdtJ8uiZBySGaRwjmGZhQ0zPhg0rMytq5LyyfpCjTOmb6fh1UrwAHISuSK59Bg1OwhNNtiojYJt9tLL7wyS7Y6r4Lx3C8fhQDC4paXlRNK1hC2qZdoeWOdhf397gtmeak34wTbSKQLl-TpAX1KdsKdk5ZaotfXNqlkMwEezyy8ilpoQ7sXjnunUnVclBw73k1hO9kodNyGA-WrUhzrLjJ8ulRMjKTBL1KN_5SlpazkS9QZW02wQGOFUDlirPJXI8Vd7wkipbtMOZVudPVkpWkgwa7SAZt2hG6znUt2IVyKG6PnuAHItncK21zFJBz1cw
+PayloadData=
+{
+  "exp": 1734465708,
+  "iat": 1734465408,
+  "jti": "8795f17b-3073-4133-b690-c50925b30fd7",
+  "iss": "http://localhost:8080/realms/moonstar-dev",
+  "aud": "account",
+  "sub": "837d2073-605a-4f43-8bc2-4a48d89298f3",
+  "typ": "Bearer",
+  "azp": "training",
+  "session_state": "67925b74-6ec9-4eec-ab76-0560ac75b8d3",
+  "acr": "1",
+  "allowed-origins": [
+    "/*"
+  ],
+  "realm_access": {
+    "roles": [
+      "Moonstar-User",
+      "default-roles-moonstar-dev",
+      "offline_access",
+      "uma_authorization"
+    ]
+  },
+  "resource_access": {
+    "training": {
+      "roles": [
+        "USER"
+      ]
+    },
+    "account": {
+      "roles": [
+        "manage-account",
+        "manage-account-links",
+        "view-profile"
+      ]
+    }
+  },
+  "scope": "profile email",
+  "sid": "67925b74-6ec9-4eec-ab76-0560ac75b8d3",
+  "email_verified": true,
+  "preferred_username": "name"
+}
